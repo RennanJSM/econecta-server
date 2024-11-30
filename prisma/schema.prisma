@@ -1,0 +1,76 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id             String      @id @default(cuid())
+  name           String
+  email          String      @unique
+  password       String
+  birthDate      DateTime    @db.Date
+  gender         Gender
+  address        String
+  cep            String
+  cidade         String
+  bairro         String?
+  householdSize  Int
+  wasteTypes     String[]    // Tipos de resíduos (array de strings)
+  preferences    String[]    // Preferências (array de strings)
+  wasteFrequency WasteFrequency
+  diyLevel       DIYLevel
+  availableTime  Int?
+
+  profile        String?
+
+  posts          Post[]                        
+  comments       Comment[]       
+
+  createdAt      DateTime    @default(now())
+  updatedAt      DateTime    @updatedAt
+}
+
+enum WasteFrequency {
+  MUITO_POUCO
+  MODERADO
+  MUITO
+}
+
+enum DIYLevel {
+  INICIANTE
+  INTERMEDIARIO
+  AVANCADO
+}
+
+enum Gender {
+  MASCULINO
+  FEMININO
+  OUTRO
+}
+
+model Post {
+  id          String      @id @default(cuid())  
+  userId      String                              
+  user        User        @relation(fields: [userId], references: [id])
+  description String                              
+  media       String                              
+  createdAt   DateTime    @default(now())         
+  updatedAt   DateTime    @updatedAt              
+
+  comments    Comment[]                           
+}
+
+model Comment {
+  id        String    @id @default(cuid())        
+  postId    String                              
+  post      Post      @relation(fields: [postId], references: [id])
+  userId    String                              
+  user      User      @relation(fields: [userId], references: [id])
+  text      String                              
+  createdAt DateTime  @default(now())           
+}
+
