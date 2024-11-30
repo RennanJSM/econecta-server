@@ -1,73 +1,114 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Econecta Backend ♻️
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Descrição ℹ️
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+O **Econecta Backend** é a API que alimenta a plataforma Econecta, promovendo sustentabilidade e engajamento comunitário. Ele oferece endpoints para gerenciar usuários, posts, comentários e integrações com serviços de Machine Learning para recomendações personalizadas de projetos DIY (faça você mesmo) com base no perfil de consumo do usuário.
 
-## Description
+## Funcionalidades
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+- **Gerenciamento de Usuários**: Registro, autenticação, atualização e exclusão de usuários, incluindo perfis detalhados com preferências e histórico de atividades.
+- **Gerenciamento de Posts e Comentários**: Criação, leitura, atualização e exclusão de posts e comentários, permitindo a interação entre os membros da comunidade.
+- **Integração com Machine Learning**: Integração com modelos de recomendação para sugerir projetos DIY personalizados aos usuários.
+- **Mapa de Alertas**: Endpoints para reportar e visualizar riscos ambientais como poluição, desmatamento ou enchentes, com geolocalização.
 
-## Installation
+## Time 🏆
 
-```bash
-$ npm install
+### 👨‍💻 Desenvolvedores
+
+**Breno do Amaral**
+
+- 📧 E-mail: brenodoamaral1@gmail.com
+- 🌐 GitHub: [github.com/brenodoamaral1](https://github.com/brenodoamaral1)
+
+**Rennan Miranda**
+
+- 📧 E-mail: rennan.jsmiranda@gmail.com
+- 🌐 GitHub: [github.com/RennanJSM](https://github.com/RennanJSM)
+
+**Luís Vinicius**
+
+- 📧 E-mail: luislauriano@outlook.com.br
+- 🌐 GitHub: [github.com/luislauriano](https://github.com/luislauriano)
+
+### 🎨 UX/UI Designers
+
+**Gabriella Graciano**
+
+- 📧 E-mail: gabifc_graciano@hotmail.com
+- 🖋️ Behance: [behance.net/gabygraciano](https://www.behance.net/gabygraciano)
+
+**Wictor Melo**
+
+- 📧 E-mail: wictormannuel@gmail.com
+- 🌐 GitHub: [github.com/Wictor0](https://github.com/Wictor0)
+
+
+
+## Tecnologias ⚙️
+
+- **Node.js**
+- **NestJS**
+- **TypeScript**
+- **Prisma**
+- **PostgreSQL**
+
+## Machine Learning 🧠
+
+🔗 **Repositório do Modelo de Recomendação**:  
+[github.com/luislauriano/econecta](https://github.com/luislauriano/econecta)
+
+🚀 **Teste o modelo diretamente pelo link**:  
+Acesse aqui: [econecta.streamlit.app](https://econecta.streamlit.app/)
+
+## Instalação ⬇️
+
+### Passo 1: Clonar o Repositório
+
+Abra o terminal e execute o seguinte comando para clonar o repositório do backend:
+
+```
+git clone https://github.com/seu-usuario/econecta-server.git
 ```
 
-## Running the app
+### Passo 2: Instalar Dependências
 
-```bash
-# development
-$ npm run start
+Navegue até a pasta do projeto clonado e execute:
 
-# watch mode
-$ npm run start:dev
+```
+cd econecta-server
+npm install
 
-# production mode
-$ npm run start:prod
 ```
 
-## Test
+### Passo 3: Configurar o Banco de Dados
 
-```bash
-# unit tests
-$ npm run test
+- Certifique-se de ter o PostgreSQL instalado e em execução.
+- Crie um banco de dados para a aplicação.
+- Copie o arquivo ```.env.example``` para ```.env``` e configure as credenciais do banco de dados:
 
-# e2e tests
-$ npm run test:e2e
+```
+DATABASE_URL="postgresql://usuario:senha@localhost:5432/econecta"
 
-# test coverage
-$ npm run test:cov
 ```
 
-## Support
+### Passo 4: Executar Migrações do Prisma
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+Execute o comando para aplicar as migrações ao banco de dados:
 
-## Stay in touch
+```
+npx prisma migrate dev --name init
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+```
 
-## License
+### Passo 5: Iniciar o Servidor
 
-Nest is [MIT licensed](LICENSE).
+Inicie o servidor em modo de desenvolvimento:
+
+```
+npm run start:dev
+
+```
+
+## Rodando o Projeto 🏃
+
+O servidor estará rodando em ```http://localhost:3000```. Você pode testar os endpoints utilizando ferramentas como Postman ou Insomnia.
